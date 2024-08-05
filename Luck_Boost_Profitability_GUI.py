@@ -23,7 +23,6 @@ from PyQt5.QtWidgets import (
     )
 from qdarktheme import setup_theme
 from numpy import floor, ceil
-# import requests
 from requests import get, RequestException
 
 class GUI(QWidget):
@@ -98,25 +97,25 @@ class GUI(QWidget):
         Glob of Ectoplasm/Pile of Crystalline Dust Icons
         """
         self.Glob_of_Ectoplasm_Label = QLabel()
-        self.Glob_of_Ectoplasm_Image = QPixmap("Glob_of_Ectoplasm.png")
+        self.Glob_of_Ectoplasm_Image = QPixmap("Images/Glob_of_Ectoplasm.png")
         self.Glob_of_Ectoplasm_Image = self.Glob_of_Ectoplasm_Image.scaled(50, 50, aspectRatioMode=True)
         self.Glob_of_Ectoplasm_Label.setPixmap(self.Glob_of_Ectoplasm_Image)
         
         self.Pile_of_Crystalline_Dust_Label = QLabel()
-        self.Pile_of_Crystalline_Dust_Image = QPixmap("Pile_of_Crystalline_Dust.png")
+        self.Pile_of_Crystalline_Dust_Image = QPixmap("Images/Pile_of_Crystalline_Dust.png")
         self.Pile_of_Crystalline_Dust_Image = self.Pile_of_Crystalline_Dust_Image.scaled(50, 50, aspectRatioMode=True)
         self.Pile_of_Crystalline_Dust_Label.setPixmap(self.Pile_of_Crystalline_Dust_Image)
         
         """
         Profit/Loss/Placeholder Icons
         """
-        self.Profit_Image = QPixmap("Profit.png")
+        self.Profit_Image = QPixmap("Images/Profit.png")
         self.Scaled_Profit_Image = self.Profit_Image.scaled(50, 50, aspectRatioMode=True)
         
-        self.Loss_Image = QPixmap("Loss.png")
+        self.Loss_Image = QPixmap("Images/Loss.png")
         self.Scaled_Loss_Image = self.Loss_Image.scaled(50, 50, aspectRatioMode=True)
         
-        self.Placeholder_Image = QPixmap("User_Fey_Zeal_Gw2wlogo.png")
+        self.Placeholder_Image = QPixmap("Images/User_Fey_Zeal_Gw2wlogo.png")
         self.Scaled_Placeholder_Image = self.Placeholder_Image.scaled(50, 50, aspectRatioMode=True)
         
         self.Flexible_Label = QLabel()
@@ -127,49 +126,49 @@ class GUI(QWidget):
         """
         # Gold
         self.Gold_Coin_Label_1 = QLabel()
-        self.Gold_Coin_Image_1 = QPixmap("Gold_coin_(highres).png")
+        self.Gold_Coin_Image_1 = QPixmap("Images/Gold_coin_(highres).png")
         self.Scaled_Gold_Coin_Image_1 = self.Gold_Coin_Image_1.scaled(50, 50, aspectRatioMode=True)
         self.Gold_Coin_Label_1.setPixmap(self.Scaled_Gold_Coin_Image_1)
         
         self.Gold_Coin_Label_2 = QLabel()
-        self.Gold_Coin_Image_2 = QPixmap("Gold_coin_(highres).png")
+        self.Gold_Coin_Image_2 = QPixmap("Images/Gold_coin_(highres).png")
         self.Scaled_Gold_Coin_Image_2 = self.Gold_Coin_Image_2.scaled(50, 50, aspectRatioMode=True)
         self.Gold_Coin_Label_2.setPixmap(self.Scaled_Gold_Coin_Image_2)
         
         self.Gold_Coin_Label_3 = QLabel()
-        self.Gold_Coin_Image_3 = QPixmap("Gold_coin_(highres).png")
+        self.Gold_Coin_Image_3 = QPixmap("Images/Gold_coin_(highres).png")
         self.Scaled_Gold_Coin_Image_3 = self.Gold_Coin_Image_3.scaled(50, 50, aspectRatioMode=True)
         self.Gold_Coin_Label_3.setPixmap(self.Scaled_Gold_Coin_Image_3)
         
         # Silver
         self.Silver_Coin_Label_1 = QLabel()
-        self.Silver_Coin_Image_1 = QPixmap("Silver_coin_(highres).png")
+        self.Silver_Coin_Image_1 = QPixmap("Images/Silver_coin_(highres).png")
         self.Scaled_Silver_Coin_Image_1 = self.Silver_Coin_Image_1.scaled(50, 50, aspectRatioMode=True)
         self.Silver_Coin_Label_1.setPixmap(self.Scaled_Silver_Coin_Image_1)
         
         self.Silver_Coin_Label_2 = QLabel()
-        self.Silver_Coin_Image_2 = QPixmap("Silver_coin_(highres).png")
+        self.Silver_Coin_Image_2 = QPixmap("Images/Silver_coin_(highres).png")
         self.Scaled_Silver_Coin_Image_2 = self.Silver_Coin_Image_2.scaled(50, 50, aspectRatioMode=True)
         self.Silver_Coin_Label_2.setPixmap(self.Scaled_Silver_Coin_Image_2)
         
         self.Silver_Coin_Label_3 = QLabel()
-        self.Silver_Coin_Image_3 = QPixmap("Silver_coin_(highres).png")
+        self.Silver_Coin_Image_3 = QPixmap("Images/Silver_coin_(highres).png")
         self.Scaled_Silver_Coin_Image_3 = self.Silver_Coin_Image_3.scaled(50, 50, aspectRatioMode=True)
         self.Silver_Coin_Label_3.setPixmap(self.Scaled_Silver_Coin_Image_3)
         
         # Copper
         self.Copper_Coin_Label_1 = QLabel()
-        self.Copper_Coin_Image_1 = QPixmap("Copper_coin_(highres).png")
+        self.Copper_Coin_Image_1 = QPixmap("Images/Copper_coin_(highres).png")
         self.Scaled_Copper_Coin_Image_1 = self.Copper_Coin_Image_1.scaled(50, 50, aspectRatioMode=True)
         self.Copper_Coin_Label_1.setPixmap(self.Scaled_Copper_Coin_Image_1)
         
         self.Copper_Coin_Label_2 = QLabel()
-        self.Copper_Coin_Image_2 = QPixmap("Copper_coin_(highres).png")
+        self.Copper_Coin_Image_2 = QPixmap("Images/Copper_coin_(highres).png")
         self.Scaled_Copper_Coin_Image_2 = self.Copper_Coin_Image_2.scaled(50, 50, aspectRatioMode=True)
         self.Copper_Coin_Label_2.setPixmap(self.Scaled_Copper_Coin_Image_2)
         
         self.Copper_Coin_Label_3 = QLabel()
-        self.Copper_Coin_Image_3 = QPixmap("Copper_coin_(highres).png")
+        self.Copper_Coin_Image_3 = QPixmap("Images/Copper_coin_(highres).png")
         self.Scaled_Copper_Coin_Image_3 = self.Copper_Coin_Image_3.scaled(50, 50, aspectRatioMode=True)
         self.Copper_Coin_Label_3.setPixmap(self.Scaled_Copper_Coin_Image_3)
         
