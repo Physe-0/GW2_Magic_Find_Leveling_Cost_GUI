@@ -7,7 +7,7 @@ Created on Fri Aug  2 20:36:44 2024
 
 import sys
 from PyQt5.QtCore import Qt, QThreadPool, QRunnable, pyqtSlot, pyqtSignal, QObject
-from PyQt5.QtGui import QPixmap
+from PyQt5.QtGui import QPixmap, QColor
 from PyQt5.QtWidgets import (
     QApplication,
     QWidget,
@@ -27,6 +27,7 @@ from qdarktheme import setup_theme
 from numpy import floor, ceil
 from requests import get, RequestException
 from Magic_Find_Req_Luck import Magic_Find_Req_Luck_List
+from LedIndicatorWidget import LedIndicator
 
 class GUI(QWidget):
     
@@ -36,10 +37,23 @@ class GUI(QWidget):
         
         self.threadpool = QThreadPool()
         
+        self.API_Check = self.check_gw2_api_status()
+        
+        if self.API_Check[0] == False:
+            
+            error_pop_up = QMessageBox()
+            error_pop_up.setWindowTitle("ERROR")
+            error_pop_up.setText(self.API_Check[1])
+            error_pop_up.setIcon(QMessageBox.Information)
+            error_pop_up.exec_()
+        
         self.Set_Up_GUI()
     
     def Set_Up_GUI(self):
         
+        """
+        GUI Window Title
+        """
         self.setWindowTitle('Luck Boost Profitability')
         
         """
@@ -88,9 +102,10 @@ class GUI(QWidget):
         
         # Check Boxes to select either Place Order or Buy Instantly (Ectos)
         self.Ecto_Place_Order_Checkbox = QCheckBox("Place Order (Ectos)")
-        self.Ecto_Place_Order_Checkbox.setChecked(True)
         self.Ecto_Buy_Instantly_Checkbox = QCheckBox("Buy Instantly (Ectos)")
+        self.Ecto_Place_Order_Checkbox.setChecked(True)
         
+        # At least one, but only one, Ecto check box can/should be checked, ever
         self.Ecto_Place_Order_Checkbox.stateChanged.connect(self.Manage_Checkboxes)
         self.Ecto_Buy_Instantly_Checkbox.stateChanged.connect(self.Manage_Checkboxes)
         
@@ -99,6 +114,7 @@ class GUI(QWidget):
         self.Dust_List_This_Item_CheckBox = QCheckBox("List This Item (Dust)")
         self.Dust_List_This_Item_CheckBox.setChecked(True)
         
+        # At least one, but only one, Dust check box can/should be checked, ever
         self.Dust_Sell_Instantly_Checkbox.stateChanged.connect(self.Manage_Checkboxes)
         self.Dust_List_This_Item_CheckBox.stateChanged.connect(self.Manage_Checkboxes)
         
@@ -120,6 +136,24 @@ class GUI(QWidget):
         self.Current_Luck_Label = QLabel("Please enter your current Luck:")
         self.Resultant_Luck_and_Magic_Find_Label = QLabel("ESTIMATED RESULTANT BASE MAGIC FIND AND LUCK:")
         self.Magic_Find_Label = QLabel("+0%")
+        self.API_Status_Label = QLabel("API STATUS:", alignment=Qt.AlignCenter)
+
+        """
+        LEDs
+        """
+        self.API_Status_LED = LedIndicator()
+        self.API_Status_LED.setDisabled(True)
+        
+        if self.API_Check[0] == True:
+            
+            self.API_Status_LED.setChecked(True)
+        
+        elif self.API_Check[0] == False:
+            
+            # Make the led red
+            self.API_Status_LED.on_color_1 = QColor(255, 0, 0)
+            self.API_Status_LED.on_color_2 = QColor(176, 0, 0)
+            self.API_Status_LED.setChecked(True)
         
         """
         Glob of Ectoplasm/Pile of Crystalline Dust Icons
@@ -294,7 +328,6 @@ class GUI(QWidget):
         """
         Luck Progress Bar
         """
-        #!!!
         self.Resultant_Luck_Bar = QProgressBar()
         self.Resultant_Luck_Bar.setFormat("0")
         self.Resultant_Luck_Bar.setValue(0)
@@ -484,7 +517,7 @@ class GUI(QWidget):
         self.Frame_4_Layout = QVBoxLayout()
         self.Frame_4.setLayout(self.Frame_4_Layout)
         self.Frame_4_Layout.addLayout(self.Estimated_Yield_Layout)
-        #!!!
+        
         self.Frame_5 = QFrame()
         self.Frame_5.setFrameShape(QFrame.Panel)
         self.Frame_5_Layout = QVBoxLayout()
@@ -506,38 +539,54 @@ class GUI(QWidget):
         # Overall Layout
         self.GUI_Layout = QVBoxLayout()
         
-        # Left and Right Columns
-        self.Left_Column = QVBoxLayout()
-        self.Right_Column = QVBoxLayout()
+        # API Status Layout
+        self.API_Status_Layout = QHBoxLayout()
+        self.API_Status_Layout.addWidget(self.API_Status_Label, alignment = Qt.AlignRight)
+        self.API_Status_Layout.addWidget(self.API_Status_LED, alignment = Qt.AlignLeft)
+        self.GUI_Layout.addLayout(self.API_Status_Layout)
+        
+        # Left Column
+        self.Left_Column = QFrame()
+        self.Left_Column.setFrameShape(QFrame.StyledPanel)
+        self.Left_Column_Layout = QVBoxLayout()
+        self.Left_Column.setLayout(self.Left_Column_Layout)
+        self.Left_Column_Layout.addWidget(self.Frame_1) # Salvage Tool/Number of Ectos Stuff
+        self.Left_Column_Layout.addWidget(self.Frame_2) # Ecto Related Stuff
+        self.Left_Column_Layout.addWidget(self.Frame_3) # Dust Related Stuff
+        
+        # Right Column
+        self.Right_Column = QFrame()
+        self.Right_Column.setFrameShape(QFrame.StyledPanel)
+        self.Right_Column_Layout = QVBoxLayout()
+        self.Right_Column.setLayout(self.Right_Column_Layout)
+        self.Right_Column_Layout.addWidget(self.Frame_4) # Estimated Yield Stuff
+        self.Right_Column_Layout.addWidget(self.Frame_5) # Estimated Resultant Luck/Magic Find
+        self.Right_Column_Layout.addWidget(self.Frame_6) # Profit Related Stuff
         
         # Adding Columns to GUI
         self.Columns = QHBoxLayout()
-        self.Columns.addLayout(self.Left_Column)
-        self.Columns.addLayout(self.Right_Column)
+        self.Columns.addWidget(self.Left_Column)
+        self.Columns.addWidget(self.Right_Column)
         self.GUI_Layout.addLayout(self.Columns)
         
-        # Salvage Tool/Number of Ectos Stuff
-        self.Left_Column.addWidget(self.Frame_1)
+        # Run Button Frame
+        self.Run_Button_Frame = QFrame()
+        self.Run_Button_Frame.setFrameShape(QFrame.Panel)
+        self.Run_Button_Frame_Layout = QVBoxLayout()
+        self.Run_Button_Frame.setLayout(self.Run_Button_Frame_Layout)
+        self.Run_Button_Frame_Layout.addWidget(self.Run_Button)
         
-        # Ecto Related Stuff
-        self.Left_Column.addWidget(self.Frame_2)
-        
-        # Dust Related Stuff
-        self.Left_Column.addWidget(self.Frame_3)
-        
-        # Estimated Yield Stuff
-        self.Right_Column.addWidget(self.Frame_4)
-        
-        # Estimated Resultant Luck/Magic Find
-        self.Right_Column.addWidget(self.Frame_5)
-        
-        # Profit Related Stuff
-        self.Right_Column.addWidget(self.Frame_6)
-        
-        # Run Button
-        self.GUI_Layout.addWidget(self.Run_Button)
+        self.GUI_Layout.addWidget(self.Run_Button_Frame)
         
         self.setLayout(self.GUI_Layout)
+        
+        if self.API_Check[0] != False:
+        
+            self.Ecto_Place_Order_Checkbox.setChecked(False)
+            self.Ecto_Place_Order_Checkbox.setChecked(True)
+            
+            self.Dust_List_This_Item_CheckBox.setChecked(False)
+            self.Dust_List_This_Item_CheckBox.setChecked(True)
     
     def CALCULATE(self):
         
@@ -584,8 +633,10 @@ class GUI(QWidget):
             self.User_Current_Luck
             )
         
-        # Let multithreaded worker print to console
-        self.worker.signals.message.connect(self.PRINT)
+# =============================================================================
+#         # Let multithreaded worker print to console
+#         self.worker.signals.message.connect(self.PRINT)
+# =============================================================================
         
         # Connect results of multithreaded worker to GUI configuration function
         self.worker.signals.RESULTS.connect(self.Set_Fields)
@@ -622,7 +673,7 @@ class GUI(QWidget):
         New_Luck_str = str(int(results[15]))
         Next_Level_Luck_int = int(results[16])
         Next_Level_Luck_str = str(int(results[16]))
-        #!!!
+        
         if float(Gold_Profit) < 0:
             
             self.Flexible_Label.setPixmap(self.Scaled_Loss_Image)
@@ -660,11 +711,91 @@ class GUI(QWidget):
         self.Resultant_Luck_Bar.setMaximum(Next_Level_Luck_int)
         self.Resultant_Luck_Bar.setValue(New_Luck_int)
     
+    def get_item_buy_price(self, item_id: int) -> float:
+        """
+        Retrieve the buy price of an item from the Guild Wars 2 API.
+        
+        Args:
+            item_id (int): The ID of the item to retrieve the buy price for.
+        
+        Returns:
+            float: The buy price of the item, or None if an error occurs.
+        """
+        base_url = "https://api.guildwars2.com/v2/commerce/prices"
+        params = {"ids": item_id}
+
+        try:
+            response = get(base_url, params=params, timeout=10)  # Timeout set to 10 seconds
+            response.raise_for_status()  # Raise an exception for 4xx and 5xx status codes
+
+            data = response.json()
+            return data[0]["buys"]["unit_price"]  # Accessing the buy price
+
+        except RequestException as e:
+            error_pop_up = QMessageBox()
+            error_pop_up.setWindowTitle("ERROR")
+            error_pop_up.setText(f"Error fetching data for item with ID {item_id}: {e}")
+            error_pop_up.setIcon(QMessageBox.Information)
+# =============================================================================
+#             print(f"Error fetching data for item with ID {item_id}: {e}")
+# =============================================================================
+            error_pop_up.exec_()
+            return None
+    
+    def get_item_sell_price(self, item_id: int) -> float:
+        """
+        Retrieve the sell price of an item from the Guild Wars 2 API.
+        
+        Args:
+            item_id (int): The ID of the item to retrieve the sell price for.
+        
+        Returns:
+            float: The sell price of the item, or None if an error occurs.
+        """
+        base_url = "https://api.guildwars2.com/v2/commerce/prices"
+        params = {"ids": item_id}
+
+        try:
+            response = get(base_url, params=params, timeout=10)  # Timeout set to 10 seconds
+            response.raise_for_status()  # Raise an exception for 4xx and 5xx status codes
+
+            data = response.json()
+            return data[0]["sells"]["unit_price"]  # Accessing the sell price
+
+        except RequestException as e:
+            error_pop_up = QMessageBox()
+            error_pop_up.setWindowTitle("ERROR")
+            error_pop_up.setText(f"Error fetching data for item with ID {item_id}: {e}")
+            error_pop_up.setIcon(QMessageBox.Information)
+# =============================================================================
+#             print(f"Error fetching data for item with ID {item_id}: {e}")
+# =============================================================================
+            error_pop_up.exec_()
+            return None
+    
+    @staticmethod
+    def convert_to_currency(amount: float) -> tuple:
+        """
+        Convert an amount in copper to gold, silver, and copper.
+
+        Args:
+            amount (float): The amount in copper.
+
+        Returns:
+            tuple: A tuple containing the amount in gold, silver, and copper.
+        """
+        gold = amount // 10000
+        silver = (amount % 10000) // 100
+        copper = ceil(amount % 100)
+        return gold, silver, copper
+    
     def Manage_Checkboxes(self, state):
         
         sender = self.sender()
         
         if "Ectos" in sender.text():
+            
+            ECTO_ID = 19721 # ID for "Glob of Ectoplasm"
             
             if "Buy Instantly" in sender.text():
                 
@@ -672,6 +803,16 @@ class GUI(QWidget):
                 if state == 0:
                     
                     self.Ecto_Place_Order_Checkbox.setChecked(True)
+                    
+                    if self.API_Check[0] != False:
+                    
+                        Ecto_Price = self.get_item_buy_price(ECTO_ID)
+                        
+                        Ecto_Price_Gold, Ecto_Price_Silver, Ecto_Price_Copper = self.convert_to_currency(Ecto_Price)
+                        
+                        self.Ecto_Gold_Price_Field.setText(str(int(Ecto_Price_Gold)))
+                        self.Ecto_Silver_Price_Field.setText(str(int(Ecto_Price_Silver)))
+                        self.Ecto_Copper_Price_Field.setText(str(int(Ecto_Price_Copper)))
                 
                 else:
                     
@@ -682,6 +823,16 @@ class GUI(QWidget):
                 if state == 0:
                     
                     self.Ecto_Buy_Instantly_Checkbox.setChecked(True)
+                    
+                    if self.API_Check[0] != False:
+                    
+                        Ecto_Price = self.get_item_sell_price(ECTO_ID)
+                        
+                        Ecto_Price_Gold, Ecto_Price_Silver, Ecto_Price_Copper = self.convert_to_currency(Ecto_Price)
+                        
+                        self.Ecto_Gold_Price_Field.setText(str(int(Ecto_Price_Gold)))
+                        self.Ecto_Silver_Price_Field.setText(str(int(Ecto_Price_Silver)))
+                        self.Ecto_Copper_Price_Field.setText(str(int(Ecto_Price_Copper)))
                 
                 else:
                     
@@ -689,11 +840,23 @@ class GUI(QWidget):
         
         elif "Dust" in sender.text():
             
+            DUST_ID = 24277 # ID for "Pile of Crystalline Dust"
+                
             if "Sell Instantly" in sender.text():
                 
                 if state == 0:
                     
                     self.Dust_List_This_Item_CheckBox.setChecked(True)
+                    
+                    if self.API_Check[0] != False:
+                    
+                        Dust_Price = self.get_item_sell_price(DUST_ID)
+                        
+                        Dust_Price_Gold, Dust_Price_Silver, Dust_Price_Copper = self.convert_to_currency(Dust_Price)
+                        
+                        self.Dust_Gold_Price_Field.setText(str(int(Dust_Price_Gold)))
+                        self.Dust_Silver_Price_Field.setText(str(int(Dust_Price_Silver)))
+                        self.Dust_Copper_Price_Field.setText(str(int(Dust_Price_Copper)))
                 
                 else:
                     
@@ -704,6 +867,16 @@ class GUI(QWidget):
                 if state == 0:
                     
                     self.Dust_Sell_Instantly_Checkbox.setChecked(True)
+                    
+                    if self.API_Check[0] != False:
+                    
+                        Dust_Price = self.get_item_buy_price(DUST_ID)
+                        
+                        Dust_Price_Gold, Dust_Price_Silver, Dust_Price_Copper = self.convert_to_currency(Dust_Price)
+                        
+                        self.Dust_Gold_Price_Field.setText(str(int(Dust_Price_Gold)))
+                        self.Dust_Silver_Price_Field.setText(str(int(Dust_Price_Silver)))
+                        self.Dust_Copper_Price_Field.setText(str(int(Dust_Price_Copper)))
                 
                 else:
                     
@@ -713,9 +886,31 @@ class GUI(QWidget):
         
         self.Run_Button.setEnabled(True)
     
-    def PRINT(self, stuff: str):
-        
-        print(stuff)
+# =============================================================================
+#     def PRINT(self, stuff: str):
+#         
+#         print(stuff)
+# =============================================================================
+
+    def check_gw2_api_status(self):
+        url = "https://api.guildwars2.com/v2/commerce/prices"
+        try:
+            response = get(url)
+            if response.status_code == 200:
+                return (
+                    True,
+                    "Guild Wars 2 API is up and running."
+                    )
+            else:
+                return (
+                    False,
+                    f"Guild Wars 2 API might be down. Status code: {response.status_code}"
+                    )
+        except RequestException as e:
+            return (
+                False,
+                f"Failed to reach Guild Wars 2 API. Error: {e}"
+                )
 
 class Signals(QObject):
     
@@ -727,9 +922,13 @@ class Signals(QObject):
 class Worker(QRunnable):
     
     def __init__(self,
-                 salvage_tool, number_of_ectos,
-                 ecto_price, dust_price,
-                 current_base_MF, current_luck):
+                 salvage_tool,
+                 number_of_ectos,
+                 ecto_price,
+                 dust_price,
+                 current_base_MF,
+                 current_luck
+                 ):
         
         super().__init__()
         
@@ -803,7 +1002,9 @@ class Worker(QRunnable):
             error_pop_up.setWindowTitle("ERROR")
             error_pop_up.setText(f"Error fetching data for item with ID {item_id}: {e}")
             error_pop_up.setIcon(QMessageBox.Information)
-            print(f"Error fetching data for item with ID {item_id}: {e}")
+# =============================================================================
+#             print(f"Error fetching data for item with ID {item_id}: {e}")
+# =============================================================================
             error_pop_up.exec_()
             return None
     
@@ -832,7 +1033,9 @@ class Worker(QRunnable):
             error_pop_up.setWindowTitle("ERROR")
             error_pop_up.setText(f"Error fetching data for item with ID {item_id}: {e}")
             error_pop_up.setIcon(QMessageBox.Information)
-            print(f"Error fetching data for item with ID {item_id}: {e}")
+# =============================================================================
+#             print(f"Error fetching data for item with ID {item_id}: {e}")
+# =============================================================================
             error_pop_up.exec_()
             return None
     
@@ -846,71 +1049,81 @@ class Worker(QRunnable):
         Returns:
             tuple: A tuple containing the potential profit in gold, silver, and copper.
         """
-        if self.ecto_price == "BUY":
-            ecto_price = self.get_item_buy_price(19721)  # ID for "Glob of Ectoplasm"
-        elif self.ecto_price == "SELL":
-            ecto_price = self.get_item_sell_price(19721)  # ID for "Glob of Ectoplasm"
-        
-        ecto_price_gold, ecto_price_silver, ecto_price_copper = self.convert_to_currency(ecto_price)
-        
-        if self.dust_price == "BUY":
-            dust_price = self.get_item_buy_price(24277)  # ID for "Pile of Crystalline Dust"
-        elif self.dust_price == "SELL":
-            dust_price = self.get_item_sell_price(24277)  # ID for "Pile of Crystalline Dust"
-        
-        dust_price_gold, dust_price_silver, dust_price_copper = self.convert_to_currency(dust_price)
-
-        if ecto_price is not None and dust_price is not None:
-
-            # Calculate total cost of buying "Glob of Ectoplasm"
-            purchase_cost = ecto_quantity * ecto_price
-
-            # Calculate amount of "Pile of Crystalline Dust" obtained by salvaging
-            dust_per_ecto_function = lambda x: floor(self.dust_per_ecto * x)
-            dust_quantity = dust_per_ecto_function(ecto_quantity)
-
-            # Calculate list price for resultant quantity of "Pile of Crystalline Dust"
-            listing_price = dust_quantity * dust_price
-
-            # Calculate cost of salvaging number of purchased "Glob of Ectoplasm"
-            total_salvage_cost = ecto_quantity * self.salvage_cost_per_ecto
-
-            # Deduct listing fee (5%) and exchange fee (10%)
-            listing_fee = max(1, 0.05 * listing_price)  # Minimum 1 copper
-            exchange_fee = max(1, 0.10 * listing_price)  # Minimum 1 copper
-            trading_post_fees = listing_fee + exchange_fee
-
-            # Calculate total profit from selling "Pile of Crystalline Dust" after deducting costs
-            total_profit = (dust_quantity * dust_price) - \
-                (purchase_cost + total_salvage_cost + trading_post_fees)
-
-            total_profit_gold, total_profit_silver, total_profit_copper = self.convert_to_currency(total_profit)
+        try:
             
-            (fine_luck_yield,
-            masterwork_luck_yield,
-            rare_luck_yield,
-            exotic_luck_yield) = self.estimate_luck_yields(ecto_quantity, self.salvage_tool)
+            if self.ecto_price == "BUY":
+                ecto_price = self.get_item_buy_price(19721)  # ID for "Glob of Ectoplasm"
+            elif self.ecto_price == "SELL":
+                ecto_price = self.get_item_sell_price(19721)  # ID for "Glob of Ectoplasm"
             
-            (new_base_MF,
-             new_luck,
-             next_level_luck) = self.estimate_resultant_magic_find_and_luck(fine_luck_yield,
-                                                                                  masterwork_luck_yield,
-                                                                                  rare_luck_yield,
-                                                                                  exotic_luck_yield,
-                                                                                  self.current_base_MF,
-                                                                                  self.current_luck)
-
-            return (
-                total_profit_gold, total_profit_silver, total_profit_copper,
-                ecto_price_gold, ecto_price_silver, ecto_price_copper,
-                dust_price_gold, dust_price_silver, dust_price_copper,
-                fine_luck_yield, masterwork_luck_yield,
-                rare_luck_yield, exotic_luck_yield,
-                dust_quantity, new_base_MF, new_luck, next_level_luck
-                )
-        else:
-            print("Unable to calculate profit.")
-            return None
+            ecto_price_gold, ecto_price_silver, ecto_price_copper = self.convert_to_currency(ecto_price)
+            
+            if self.dust_price == "BUY":
+                dust_price = self.get_item_buy_price(24277)  # ID for "Pile of Crystalline Dust"
+            elif self.dust_price == "SELL":
+                dust_price = self.get_item_sell_price(24277)  # ID for "Pile of Crystalline Dust"
+            
+            dust_price_gold, dust_price_silver, dust_price_copper = self.convert_to_currency(dust_price)
+    
+            if ecto_price is not None and dust_price is not None:
+    
+                # Calculate total cost of buying "Glob of Ectoplasm"
+                purchase_cost = ecto_quantity * ecto_price
+    
+                # Calculate amount of "Pile of Crystalline Dust" obtained by salvaging
+                dust_per_ecto_function = lambda x: floor(self.dust_per_ecto * x)
+                dust_quantity = dust_per_ecto_function(ecto_quantity)
+    
+                # Calculate list price for resultant quantity of "Pile of Crystalline Dust"
+                listing_price = dust_quantity * dust_price
+    
+                # Calculate cost of salvaging number of purchased "Glob of Ectoplasm"
+                total_salvage_cost = ecto_quantity * self.salvage_cost_per_ecto
+    
+                # Deduct listing fee (5%) and exchange fee (10%)
+                listing_fee = max(1, 0.05 * listing_price)  # Minimum 1 copper
+                exchange_fee = max(1, 0.10 * listing_price)  # Minimum 1 copper
+                trading_post_fees = listing_fee + exchange_fee
+    
+                # Calculate total profit from selling "Pile of Crystalline Dust" after deducting costs
+                total_profit = (dust_quantity * dust_price) - \
+                    (purchase_cost + total_salvage_cost + trading_post_fees)
+    
+                total_profit_gold, total_profit_silver, total_profit_copper = self.convert_to_currency(total_profit)
+                
+                (fine_luck_yield,
+                masterwork_luck_yield,
+                rare_luck_yield,
+                exotic_luck_yield) = self.estimate_luck_yields(ecto_quantity, self.salvage_tool)
+                
+                (new_base_MF,
+                 new_luck,
+                 next_level_luck) = self.estimate_resultant_magic_find_and_luck(
+                                                                                fine_luck_yield,
+                                                                                masterwork_luck_yield,
+                                                                                rare_luck_yield,
+                                                                                exotic_luck_yield,
+                                                                                self.current_base_MF,
+                                                                                self.current_luck
+                                                                                )
+    
+                return (
+                    total_profit_gold, total_profit_silver, total_profit_copper,
+                    ecto_price_gold, ecto_price_silver, ecto_price_copper,
+                    dust_price_gold, dust_price_silver, dust_price_copper,
+                    fine_luck_yield, masterwork_luck_yield,
+                    rare_luck_yield, exotic_luck_yield,
+                    dust_quantity, new_base_MF, new_luck, next_level_luck
+                    )
+            else:
+# =============================================================================
+#                 print("Unable to calculate profit.")
+# =============================================================================
+                return None
+        
+        except:
+            
+            pass
     
     @staticmethod
     def convert_to_currency(amount: float) -> tuple:
@@ -923,10 +1136,14 @@ class Worker(QRunnable):
         Returns:
             tuple: A tuple containing the amount in gold, silver, and copper.
         """
-        gold = amount // 10000
-        silver = (amount % 10000) // 100
-        copper = ceil(amount % 100)
-        return gold, silver, copper
+        try:
+            gold = amount // 10000
+            silver = (amount % 10000) // 100
+            copper = ceil(amount % 100)
+            
+            return gold, silver, copper
+        except:
+            return None
     
     @staticmethod
     def estimate_luck_yields(ecto_quantity: int, salvage_tool: str) -> tuple:
