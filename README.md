@@ -19,7 +19,7 @@ Salvage Kits:
 https://wiki.guildwars2.com/wiki/Salvage_kit
 
 # Why does this exist?
-I wanted to max out my Magic Find, but didn't (and still don't) have the time to grind out essences of luck from more active gameplay. The solution was the Ecto salvage method described above (in conjunction with crafting for profit), however I quickly noticed the total costs of the process could vary wildly depending on the current prices of Ectos and Dust, which salvage tool I was using, etc. I wanted a way to estimate what the costs would be beforehand, but then discovered just how involved the mathematics of that are due to trading post fees, cost per use of salvage tools, probable yields of dust, etc. My initial effort, once I couldn't find anything online to provide such a  
+My attempts to rapidly level my magic find stat taught me that the net cost of said process can vary wildly (up to 30 gold of difference in my experience) depending on contemporaneous market conditions and the tools used. My initial solution to estimate net cost was a hard-coded python script, but once I maxed out my magic find stat I thought there's a chance someone else might find this code useful. The result is a GUI that is (hopefully) intuitive and helpful for others who find themselves in the same situation I did.
 
 # Instructions
-![image](https://github.com/user-attachments/assets/56210b59-7d8d-4f14-a0d0-6420773fa210)
+
