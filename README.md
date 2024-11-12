@@ -26,7 +26,5 @@ For those skeptical of running a random .exe from the internet, GOOD! You should
 
 Step 1: Download Python
 
-  Go to this website: https://www.python.org/downloads/windows/
-  and download Python 3.11.10 - Sept. 7, 2024
-  ![image](https://github.com/user-attachments/assets/48fe1946-47e1-4405-b06f-775814370d2d)
-
+  Go to the Microsoft Store and download Python 3.11: https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare
+  ![image](https://github.com/user-attachments/assets/97e585b1-7c25-40ab-888e-cd501f8d2194)
