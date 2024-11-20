@@ -3,10 +3,15 @@ Python version: 3.11.10
 
 This is a GUI for estimating the cost of leveling one's Magic Find through the most direct and time-efficient method of purchasing Globs of Ectoplasm from the Trading Post, salvaging said Ectos, eating the resultant Luck, and selling the resultant Piles of Crystalline Dust back on the Trading Post. It is designed to provide a reasonable estimate (based on the information from various relevant https://wiki.guildwars2.com/ articles listed below) of said costs as a reflection of CURRENT MARKET CONDITIONS.
 
+Non-exhaustive testing has so far determined the GUI's predictions regarding the net cost of the process are accurate to within +/- 1%.
+
 Assumptions:
   1) The user will salvage 100% of the Globs of Ectoplasm they purchase from the Trading Post.
   2) The user will sell 100% of the resultant Piles of Crystalline Dust back to the Trading Post.
   3) Any Buy/Sell orders made buy the user will successfully buy/sell without the need for re-listing.
+
+Disclaimer:
+Please understand that a perfect prediction simply is not possible. I have used the research compiled by dozens of users (see the Relevant Wiki Articles section below) to inform my code, but such values have been derived from the combined results of thousands of data points. Such values will most likely continue to be accurate when working with a significant quantity of ectos, but will most likely become increasingly innacurate as the user works with smaller and smaller quantities of resources. This is not to be taken as an admonishmnet to only use this GUI if you're comfortable purchasing hundreds of ectos at a time, but rather that the risks of using this method to level your Magic Find AT ALL should be considered before you put any of your hard-earned gold at risk. Always determine how much gold your are comfortable putting at risk before using this method, and to quote GW2 YouTuber Abree: "If you can't afford to go that long without the gold, that's a sign the cost or risk was too high for you." (https://youtu.be/9-cn9Wa9agQ?si=MMYQgCuHWDGR72z6 @7:41)
 
 # Relevant Wiki Articles
 Glob of Ectoplasm/salvage research:
