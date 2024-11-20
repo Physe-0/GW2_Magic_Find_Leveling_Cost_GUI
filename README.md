@@ -31,7 +31,7 @@ https://wiki.guildwars2.com/wiki/Salvage_kit
 # Why does this exist?
 My attempts to rapidly level my magic find stat taught me that the net cost of said process can vary wildly (up to 30 gold of difference in my experience) depending on contemporaneous market conditions and the tools used. My initial solution to estimate net cost was a hard-coded python script, but once I maxed out my magic find stat I thought there's a chance someone else might find this code useful. The result is a GUI that is (hopefully) intuitive and helpful for others who find themselves in the same situation I did.
 
-# Instructions
+# Installation Instructions
 For those skeptical of running a random .exe from the internet, GOOD! You should always be skeptical of such a thing. For you, here is the first method. The .exe is still available, and I will explain how to access it later.
 
 Step 1: Download Python
@@ -58,3 +58,12 @@ Step 3: Extract Files
   Move that zip folder into whatever folder you wish on your computer, though I recommend creating one that is easy to access (e.g. "Documents\GW2_GUI").
 
   Once you have done that, right-click the file and select "Extract All". A pop-up will appear letting you know where the files will be extracted to, so just ensure they're going where you expect.
+
+Step 4: Running "Run_Set_Up.bat" File
+
+  Once you have your files where you want them, you'll need to run the file "Run_Set_Up.bat". Running this will tell the version of python you installed earlier to run the file "Set_Up.py" which will install the pyhton libraries necessary to run the GUI:
+
+    PyQt5 (https://pypi.org/project/PyQt5/)
+    pyqtdarktheme (https://pypi.org/project/pyqtdarktheme/)
+    numpy (https://pypi.org/project/numpy/)
+    requests (https://pypi.org/project/requests/)
