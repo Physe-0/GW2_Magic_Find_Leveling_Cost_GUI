@@ -53,4 +53,8 @@ Step 2: Download Code
 
   ![image](https://github.com/user-attachments/assets/0e698905-4491-403b-9ad6-9a4dbbfc832d)
 
+Step 3: Extract Files
 
+  Move that zip folder into whatever folder you wish on your computer, though I recommend creating one that is easy to access (e.g. "Documents\GW2_GUI").
+
+  Once you have done that, right-click the file and select "Extract All". A pop-up will appear letting you know where the files will be extracted to, so just ensure they're going where you expect.
