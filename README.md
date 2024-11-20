@@ -34,6 +34,8 @@ My attempts to rapidly level my magic find stat taught me that the net cost of s
 # Installation Instructions (Method 1: Pure python, non-exe)
 For those skeptical of running a random .exe from the internet, GOOD! You should always be skeptical of such a thing. For you, here is the first method. The .exe is still available, and I will explain how to access it later.
 
+At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
+
 **Step 1: Download Python**
 
   Go to the Microsoft Store and download Python 3.11 [I know this is technically version 3.11.9, but it works regardless]: https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare
@@ -118,3 +120,5 @@ Once the files are in the folder where you want them and have been extracted, yo
 Now just run (double-click) the file "Luck_Boost_Profitability_GUI.exe"!
 
 You will get a Windows pop-up like those discussed earlier, just follow the same steps I layed out for dealing with those.
+
+At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
