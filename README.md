@@ -107,4 +107,5 @@ Then click on this link, which should download a zip file:
 
 You should now see the file in your downloads folder:
 
+![image](https://github.com/user-attachments/assets/c135b4d3-9731-43d4-8e62-9ea361eae6c8)
 
