@@ -124,3 +124,7 @@ You will get a Windows pop-up like those discussed earlier, just follow the same
 At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
 
 # How to Use the GUI
+
+Here are you inputs, a.k.a. the things with which you interact:
+
+![image](https://github.com/user-attachments/assets/b9a243c5-2006-46e4-8e41-784471619a79)
