@@ -140,3 +140,9 @@ This is just a Green/Red LED that will let you know (along with a pop-up when th
 And here is the button you press to run everything once you have configured your inputs:
 
 ![image](https://github.com/user-attachments/assets/83997dec-915d-4810-a125-c887b0f92184)
+
+**Inputs**
+
+This section is where you select which salvage kit or salvage tool you plan on using to salvage the ectos you plan on buying:
+
+![image](https://github.com/user-attachments/assets/3f0c8a65-22ee-4f6e-a990-2cbe87c38a9a)
