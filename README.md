@@ -34,12 +34,12 @@ My attempts to rapidly level my magic find stat taught me that the net cost of s
 # Installation Instructions (Method 1: Pure python, non-exe)
 For those skeptical of running a random .exe from the internet, GOOD! You should always be skeptical of such a thing. For you, here is the first method. The .exe is still available, and I will explain how to access it later.
 
-Step 1: Download Python
+**Step 1: Download Python**
 
   Go to the Microsoft Store and download Python 3.11 [I know this is technically version 3.11.9, but it works regardless]: https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare
   ![image](https://github.com/user-attachments/assets/97e585b1-7c25-40ab-888e-cd501f8d2194)
 
-Step 2: Download Code
+**Step 2: Download Code**
 
   First click on this green "Code" button at the top of the page, which should open a drop-down menu:
   
@@ -53,13 +53,13 @@ Step 2: Download Code
 
   ![image](https://github.com/user-attachments/assets/0e698905-4491-403b-9ad6-9a4dbbfc832d)
 
-Step 3: Extract Files
+**Step 3: Extract Files**
 
   Move that zip folder into whatever folder you wish on your computer, though I recommend creating one that is easy to access (e.g. "Documents\GW2_GUI").
 
   Once you have done that, right-click the file and select "Extract All". A pop-up will appear letting you know where the files will be extracted to, so just ensure they're going where you expect.
 
-Step 4: Running "Run_Set_Up.bat" File
+**Step 4: Running "Run_Set_Up.bat" File**
 
   Once you have your files where you want them, you'll need to run the file "Run_Set_Up.bat". Running this will tell the version of python you installed earlier to run the file "Set_Up.py" which will automatically install the pyhton libraries necessary to run the GUI, listed here (you don't have to do anything with these links, I'm just providing them for maximum transparency):
 
@@ -76,4 +76,4 @@ Step 4: Running "Run_Set_Up.bat" File
   ![image](https://github.com/user-attachments/assets/c704437f-c20d-41a3-8217-c2994524387b)
 
   
-Step 5: Running "Launch_GUI.bat" File
+**Step 5: Running "Launch_GUI.bat" File**
