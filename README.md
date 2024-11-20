@@ -5,6 +5,8 @@ This is a GUI for estimating the cost of leveling one's Magic Find through the m
 
 Non-exhaustive testing has so far determined the GUI's predictions regarding the net cost of the process are accurate to within +/- 1%.
 
+![image](https://github.com/user-attachments/assets/21fc3b05-b724-4c27-b592-a4a878cf6869)
+
 Assumptions:
   1) The user will salvage 100% of the Globs of Ectoplasm they purchase from the Trading Post.
   2) The user will sell 100% of the resultant Piles of Crystalline Dust back to the Trading Post.
