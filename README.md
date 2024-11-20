@@ -64,6 +64,11 @@ Step 4: Running "Run_Set_Up.bat" File
   Once you have your files where you want them, you'll need to run the file "Run_Set_Up.bat". Running this will tell the version of python you installed earlier to run the file "Set_Up.py" which will install the pyhton libraries necessary to run the GUI:
 
   PyQt5 (https://pypi.org/project/PyQt5/)
+  
   pyqtdarktheme (https://pypi.org/project/pyqtdarktheme/)
+  
   numpy (https://pypi.org/project/numpy/)
+  
   requests (https://pypi.org/project/requests/)
+  
+Step 5: Running "Launch_GUI.bat" File
