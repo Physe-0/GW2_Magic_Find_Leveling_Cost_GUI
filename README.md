@@ -91,7 +91,7 @@ For those skeptical of running a random .exe from the internet, GOOD! You should
 
   Now we can actually launch the GUI! All you have to do is run "Launch_GUI.bat" and after a few seconds the GUI should appear!
 
-  You might get another pop-up from Windows warning you it doesn't recognize the file. Same advice goes this time as last time.
+  You might get another pop-up from Windows warning you it doesn't recognize the file; same advice goes this time as last time.
 
 # Installation Instructions (Method 2: .exe File)
 
@@ -115,3 +115,6 @@ Once the files are in the folder where you want them and have been extracted, yo
 
 ![image](https://github.com/user-attachments/assets/a8975a1b-5835-4e08-b8cc-44a792616423)
 
+Now just run (double-click) the file "Luck_Boost_Profitability_GUI.exe"!
+
+You will get a Windows pop-up like those discussed earlier, just follow the same steps I layed out for dealing with those.
