@@ -95,7 +95,7 @@ At some point in the process you might get a Windows pop-up telling you that pyt
 
   You might get another pop-up from Windows warning you it doesn't recognize the file; same advice goes this time as last time.
 
-# Installation Instructions (Method 2: .exe File)
+# Installation Instructions (Method 2: .exe File made using PyInstaller)
 
 "Are you joking? I'm not doing all that! Just give me the file already!"
 
@@ -125,6 +125,11 @@ At some point in the process you might get a Windows pop-up telling you that pyt
 
 # How to Use the GUI
 
-Here are you inputs, a.k.a. the things with which you interact:
+Here are your inputs, a.k.a. the things with which you interact:
 
 ![image](https://github.com/user-attachments/assets/b9a243c5-2006-46e4-8e41-784471619a79)
+
+And here are the outputs, a.k.a. the results of you inputs and the resultant information from both data retrieved from the GW2 API and values calculated by the GUI:
+
+![image](https://github.com/user-attachments/assets/126e9973-8b18-41e0-bdf8-4ebfbcc6cac8)
+
