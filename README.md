@@ -61,7 +61,7 @@ Step 3: Extract Files
 
 Step 4: Running "Run_Set_Up.bat" File
 
-  Once you have your files where you want them, you'll need to run the file "Run_Set_Up.bat". Running this will tell the version of python you installed earlier to run the file "Set_Up.py" which will install the pyhton libraries necessary to run the GUI:
+  Once you have your files where you want them, you'll need to run the file "Run_Set_Up.bat". Running this will tell the version of python you installed earlier to run the file "Set_Up.py" which will automatically install the pyhton libraries necessary to run the GUI, listed here (you don't have to do anything with these links, I'm just providing them for maximum transparency):
 
   PyQt5 (https://pypi.org/project/PyQt5/)
   
