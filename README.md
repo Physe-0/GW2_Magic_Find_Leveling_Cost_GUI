@@ -143,6 +143,6 @@ And here is the button you press to run everything once you have configured your
 
 **Inputs**
 
-This section is where you select which salvage kit or salvage tool you plan on using to salvage the ectos you plan on buying:
+This section is where you select which salvage kit or salvage tool you plan on using to salvage the ectos you plan on buying. "CpU" stands for "Cost per Use", and "DpE" stands for "Dust per Ecto":
 
 ![image](https://github.com/user-attachments/assets/3f0c8a65-22ee-4f6e-a990-2cbe87c38a9a)
