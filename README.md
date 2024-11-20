@@ -92,3 +92,9 @@ For those skeptical of running a random .exe from the internet, GOOD! You should
   Now we can actually launch the GUI! All you have to do is run "Launch_GUI.bat" and after a few seconds the GUI should appear!
 
   You might get another pop-up from Windows warning you it doesn't recognize the file. Same advice goes this time as last time.
+
+# Installation Instructions (Method 2: .exe File)
+
+"Are you joking? I'm not doing all that! Just give me the file already!"
+
+Ok, first click on this section:
