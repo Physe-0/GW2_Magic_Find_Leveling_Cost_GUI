@@ -98,3 +98,5 @@ For those skeptical of running a random .exe from the internet, GOOD! You should
 "Are you joking? I'm not doing all that! Just give me the file already!"
 
 Ok, first click on this section:
+
+![image](https://github.com/user-attachments/assets/1a177672-37cf-40fb-a847-3affdf20d3ad)
