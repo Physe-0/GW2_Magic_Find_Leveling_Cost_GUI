@@ -83,5 +83,12 @@ For those skeptical of running a random .exe from the internet, GOOD! You should
 
   ![image](https://github.com/user-attachments/assets/be678844-6c83-4325-b5ba-a4a71d857628)
 
-  
+  You'll know it's done because a line will appear saying "Press any key to continue . . ."
+
+  Then just hit any key like it says and the window will close.
+
 **Step 5: Running "Launch_GUI.bat" File**
+
+  Now we can actually launch the GUI! All you have to do is run "Launch_GUI.bat" and after a few seconds the GUI should appear!
+
+  You might get another pop-up from Windows warning you it doesn't recognize the file. Same advice goes this time as last time.
