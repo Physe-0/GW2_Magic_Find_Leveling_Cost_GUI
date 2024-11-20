@@ -103,5 +103,6 @@ Ok, first click on this section:
 
 Then click on this link, which should download a zip file:
 
-![image](https://github.com/user-attachments/assets/62fdedb3-66f4-4ce8-9a1c-a9f126a19e58)
+![image](https://github.com/user-attachments/assets/5dae2f8d-43ee-4260-9b27-b7710468102b)
+
 
