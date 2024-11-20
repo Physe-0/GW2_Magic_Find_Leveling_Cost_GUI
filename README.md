@@ -75,5 +75,8 @@ For those skeptical of running a random .exe from the internet, GOOD! You should
 
   ![image](https://github.com/user-attachments/assets/c704437f-c20d-41a3-8217-c2994524387b)
 
+  This is just Windows saying it doesn't recognize the file and it thinks it might be malware or a virus or something. You can just click "More Info" and then "Run Anyway":
+
+  ![image](https://github.com/user-attachments/assets/d278e24d-735d-4148-8a74-3085a4c7fcb4)
   
 **Step 5: Running "Launch_GUI.bat" File**
