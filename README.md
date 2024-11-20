@@ -100,3 +100,8 @@ For those skeptical of running a random .exe from the internet, GOOD! You should
 Ok, first click on this section:
 
 ![image](https://github.com/user-attachments/assets/1a177672-37cf-40fb-a847-3affdf20d3ad)
+
+Then click on this link, which should download a zip file:
+
+![image](https://github.com/user-attachments/assets/62fdedb3-66f4-4ce8-9a1c-a9f126a19e58)
+
