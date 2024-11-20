@@ -34,3 +34,8 @@ Step 1: Download Python
 
   Go to the Microsoft Store and download Python 3.11 [I know this is technically version 3.11.9, but it works regardless]: https://www.microsoft.com/store/productId/9NRWMJP3717K?ocid=pdpshare
   ![image](https://github.com/user-attachments/assets/97e585b1-7c25-40ab-888e-cd501f8d2194)
+
+Step 2: Download Code
+
+  First click on this button at the top of the page, which should open a drop-down menu:
+  ![image](https://github.com/user-attachments/assets/3e9c9da6-0aba-4922-8d89-daccda208225)
