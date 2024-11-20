@@ -136,3 +136,7 @@ And here are the outputs, a.k.a. the results of you inputs and the resultant inf
 This is just a Green/Red LED that will let you know (along with a pop-up when the GUI launches) whether or not the GW2 API is down [GREEN means it's up, RED means it's down]:
 
 ![image](https://github.com/user-attachments/assets/40537633-5ff4-44c9-9862-ec9b8b8ed710)
+
+And here is the button you press to run everything once you have configured your inputs:
+
+![image](https://github.com/user-attachments/assets/83997dec-915d-4810-a125-c887b0f92184)
