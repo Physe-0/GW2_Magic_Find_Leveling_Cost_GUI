@@ -37,5 +37,5 @@ Step 1: Download Python
 
 Step 2: Download Code
 
-  First click on this button at the top of the page, which should open a drop-down menu:
+  First click on this green "Code" button at the top of the page, which should open a drop-down menu:
   ![image](https://github.com/user-attachments/assets/3e9c9da6-0aba-4922-8d89-daccda208225)
