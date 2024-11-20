@@ -109,3 +109,9 @@ You should now see the file in your downloads folder:
 
 ![image](https://github.com/user-attachments/assets/c135b4d3-9731-43d4-8e62-9ea361eae6c8)
 
+Next, you can just follow the same instructions in "Step 3: Extract Files".
+
+Once the files are in the folder where you want them and have been extracted, you should see this:
+
+![image](https://github.com/user-attachments/assets/a8975a1b-5835-4e08-b8cc-44a792616423)
+
