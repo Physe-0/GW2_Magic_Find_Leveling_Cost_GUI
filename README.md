@@ -1,4 +1,4 @@
-# Guild Wars 2: Cost Estimator of Leveling Magic Find GUI
+# Guild Wars 2: Net Cost Estimator of Leveling Magic Find GUI
 Python version: 3.11.10
 
 This is a GUI for estimating the net cost of leveling one's Magic Find through the most direct and time-efficient method of purchasing Globs of Ectoplasm from the Trading Post, salvaging said Ectos, eating the resultant Luck, and selling the resultant Piles of Crystalline Dust back on the Trading Post. It is designed to provide a reasonable estimate (based on the information from various relevant https://wiki.guildwars2.com/ articles listed below) of said costs as a reflection of CURRENT MARKET CONDITIONS.
