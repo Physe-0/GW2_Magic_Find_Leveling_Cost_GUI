@@ -143,6 +143,6 @@ And here is the button you press to run everything once you have configured your
 
 **Inputs**
 
-This section is where you select which salvage kit or salvage tool you plan on using to salvage the ectos you plan on buying. "CpU" stands for "Cost per Use", and "DpE" stands for "Dust per Ecto":
+This section is where you select which salvage kit or salvage tool you plan on using to salvage the ectos you plan on buying. "CpU" stands for "Copper per Use" and means how many copper each of the listed options cost PER USE (either on a per use basis for the gem-store versions or as a function of their purhcase price for the others), and "DpE" stands for "Dust per Ecto" which means (ROUGHLY) how many Piles of Crystalline Dust you can expect per ecto salvaged:
 
 ![image](https://github.com/user-attachments/assets/3f0c8a65-22ee-4f6e-a990-2cbe87c38a9a)
