@@ -70,5 +70,10 @@ Step 4: Running "Run_Set_Up.bat" File
   numpy (https://pypi.org/project/numpy/)
   
   requests (https://pypi.org/project/requests/)
+
+  Once you run it, you will most likely see this pop-up or something like it appear:
+
+  ![image](https://github.com/user-attachments/assets/c704437f-c20d-41a3-8217-c2994524387b)
+
   
 Step 5: Running "Launch_GUI.bat" File
