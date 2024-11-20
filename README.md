@@ -78,5 +78,10 @@ For those skeptical of running a random .exe from the internet, GOOD! You should
   This is just Windows saying it doesn't recognize the file and it thinks it might be malware or a virus or something. You can just click "More Info" and then "Run Anyway":
 
   ![image](https://github.com/user-attachments/assets/d278e24d-735d-4148-8a74-3085a4c7fcb4)
+
+  Once you do, you'll see a command prompt window appear which will give you information about the library installation process, which will look something like this:
+
+  ![image](https://github.com/user-attachments/assets/be678844-6c83-4325-b5ba-a4a71d857628)
+
   
 **Step 5: Running "Launch_GUI.bat" File**
