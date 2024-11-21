@@ -129,7 +129,7 @@ Here are your inputs, a.k.a. the things with which you interact:
 
 ![image](https://github.com/user-attachments/assets/b9a243c5-2006-46e4-8e41-784471619a79)
 
-And here are the outputs, a.k.a. the results of you inputs and the resultant information from both data retrieved from the GW2 API and values calculated by the GUI:
+And here are the outputs, a.k.a. the results of your inputs and the resultant information from both data retrieved from the GW2 API and values calculated by the GUI:
 
 ![image](https://github.com/user-attachments/assets/126e9973-8b18-41e0-bdf8-4ebfbcc6cac8)
 
@@ -176,3 +176,7 @@ This is where the GUI tells me how many of each Essence of Luck rarity and dusts
 This is where the GUI tells me what my magic find and luck progress will be after eating all those Essences of Luck:
 
 ![image](https://github.com/user-attachments/assets/3901751b-7f1c-4fcb-9650-f1355b0f4aa5)
+
+Finally, this is where the GUI tells me what I can expect the net profit of this whole endeavor to be:
+
+![image](https://github.com/user-attachments/assets/85b7b625-9c09-4b78-ad55-616c656d42a6)
