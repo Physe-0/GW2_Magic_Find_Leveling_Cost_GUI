@@ -146,3 +146,7 @@ And here is the button you press to run everything once you have configured your
 This section is where you select which salvage kit or salvage tool you plan on using to salvage the ectos you plan on buying. "CpU" stands for "Copper per Use" and means how many copper each of the listed options cost PER USE (either on a per use basis for the gem-store versions or as a function of their purhcase price for the others), and "DpE" stands for "Dust per Ecto" which means (ROUGHLY) how many Piles of Crystalline Dust you can expect per ecto salvaged. The Black Lion Salvage Kit is a bit weird because it can only be purchased with gems or through other non-coin equivalents, so in the end I just decided to treat it as if it doesn't have a cost for using it, but it should be obvious that Black Lion Salvage Kits are not easy to acquire. If you're even considering using them for getting luck and dust from ectos, you either have literally nothing better to use them for or are so rich in-game that you can afford to blow a resource like that on leveling your magic find stat:
 
 ![image](https://github.com/user-attachments/assets/3f0c8a65-22ee-4f6e-a990-2cbe87c38a9a)
+
+This is just where you tell the GUI how many ectos you plan on purchasing. It is up to you to use the Trading Post to find out how many you can afford, the GUI will not do that for you:
+
+![image](https://github.com/user-attachments/assets/38dc4cd1-df18-42a1-8ee8-e76f89a193bc)
