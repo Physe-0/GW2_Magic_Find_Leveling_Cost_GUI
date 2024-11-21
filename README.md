@@ -48,7 +48,11 @@ Essence of Luck (rare) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(r
 
 Essence of Luck (exotic) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(exotic)#/media/File:Essence_of_Luck_(exotic).png
 
+Net Loss (Red Arrow) Icon: https://wiki.guildwars2.com/wiki/Category:Guild_upgrade_icons#/media/File:Research_Art_of_War_Level_1.png
 
+Net Profit (Green Arrow) Icon: https://wiki.guildwars2.com/wiki/Category:Guild_upgrade_icons#/media/File:Research_Architecture_Level_1.png
+
+Placeholder Icon: https://wiki.guildwars2.com/wiki/Category:ArenaNet_logos#/media/File:User_Fey_Zeal_Gw2wlogo.png
 
 # Why does this exist?
 My attempts to rapidly level my magic find stat taught me that the net cost of said process can vary wildly (up to 30 gold of difference in my experience) depending on contemporaneous market conditions and the tools used. My initial solution to estimate net cost was a hard-coded python script, but once I maxed out my base magic find stat I thought there's a chance someone else might find this code useful. The result is a GUI that is (hopefully) intuitive and helpful for others who find themselves in the same situation I did.
@@ -155,7 +159,7 @@ And here are the outputs, a.k.a. the results of your inputs and the resultant in
 
 ![image](https://github.com/user-attachments/assets/126e9973-8b18-41e0-bdf8-4ebfbcc6cac8)
 
-This is just a Green/Red LED that will let you know (along with a pop-up when the GUI launches) whether or not the GW2 API is down [GREEN means it's up, RED means it's down]:
+This is just a Green/Red LED that will let you know (along with a pop-up when the GUI launches) whether or not the GW2 API is down [GREEN means it's up, RED means it's down]. If the API is down, THE ENITRE GUI WILL NOT WORK:
 
 ![image](https://github.com/user-attachments/assets/40537633-5ff4-44c9-9862-ec9b8b8ed710)
 
@@ -173,7 +177,7 @@ This is just where you tell the GUI how many ectos you plan on purchasing, cappe
 
 ![image](https://github.com/user-attachments/assets/38dc4cd1-df18-42a1-8ee8-e76f89a193bc)
 
-If you want a prediction of what your magic find stat and luck will be at the end of the transaction, use these fields; if you don't care, you can leave them as-is. The first is capped at 300, which is the highest you can raise your magic find stat solely through consuming luck. The second is capped at 472,510 which is as high at it goes. Keep in mind that you can absolutely enter combinations of magic find and luck that are not possible in-game, so it is on you to enter the values correctly:
+If you want a prediction of what your magic find stat and luck will be at the end of the transaction, use these fields; if you don't care, you can leave them as-is. To find these values, check the bottom-right corner of your in-game "Achievements" panel. The first is capped at 300, which is the highest you can raise your magic find stat solely through consuming luck. The second is capped at 472,510 which is as high at it goes. Keep in mind that you can absolutely enter combinations of magic find and luck that are not possible in-game, so it is on you to enter the values correctly:
 
 ![image](https://github.com/user-attachments/assets/6a1999fa-00f0-4d80-a6fc-aa95100eecbb)
 
