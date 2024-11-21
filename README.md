@@ -172,3 +172,7 @@ Here, I have run an example scenario to illustrate how the outputs work. Let's s
 This is where the GUI tells me how many of each Essence of Luck rarity and dusts I can reasonably expect from this process:
 
 ![image](https://github.com/user-attachments/assets/3ffe9bd0-c1b8-40bc-8b9e-724d7fb4dc76)
+
+This is where the GUI tells me what my magic find and luck progress will be after eating all those Essences of Luck:
+
+![image](https://github.com/user-attachments/assets/3901751b-7f1c-4fcb-9650-f1355b0f4aa5)
