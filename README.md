@@ -28,6 +28,19 @@ https://wiki.guildwars2.com/wiki/Luck
 Salvage Kits:
 https://wiki.guildwars2.com/wiki/Salvage_kit
 
+**Art Assets taken from the Wiki**
+
+Glob of Ectoplasm Icon: https://wiki.guildwars2.com/wiki/Glob_of_Ectoplasm#/media/File:Glob_of_Ectoplasm.png
+Pile of Crystalline Dust Icon: https://wiki.guildwars2.com/wiki/Pile_of_Crystalline_Dust#/media/File:Pile_of_Crystalline_Dust.png
+Gold Coin Icon: https://wiki.guildwars2.com/wiki/Coin#/media/File:Gold_coin_(highres).png
+Silver Coin Icon: https://wiki.guildwars2.com/wiki/Coin#/media/File:Silver_coin_(highres).png
+Copper Coin Icon: https://wiki.guildwars2.com/wiki/Coin#/media/File:Copper_coin_(highres).png
+Essence of Luck (fine) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(fine)#/media/File:Essence_of_Luck_(fine).png
+Essence of Luck (masterwork) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(masterwork)#/media/File:Essence_of_Luck_(masterwork).png
+Essence of Luck (rare) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(rare)#/media/File:Essence_of_Luck_(rare).png
+Essence of Luck (exotic) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(exotic)#/media/File:Essence_of_Luck_(exotic).png
+
+
 # Why does this exist?
 My attempts to rapidly level my magic find stat taught me that the net cost of said process can vary wildly (up to 30 gold of difference in my experience) depending on contemporaneous market conditions and the tools used. My initial solution to estimate net cost was a hard-coded python script, but once I maxed out my base magic find stat I thought there's a chance someone else might find this code useful. The result is a GUI that is (hopefully) intuitive and helpful for others who find themselves in the same situation I did.
 
