@@ -162,3 +162,11 @@ This is where you tell the GUI whether you want to purchase ectos through buy or
 And this is where you tell the GUI how you will sell your resultant Piles of Crystalline Dust back to the Trading Post, either through listing them or instant-selling. Again, the price you see updates automatically because the GUI fetches it from the GW2 API when you check or un-check a box, so just check the box to the left of your chosen option.
 
 ![image](https://github.com/user-attachments/assets/1333950e-2d2b-44b7-965d-af8b99743a1d)
+
+**Outputs**
+
+Here, I have run an example scenario to illustrate how the outputs work. Let's say I want to purchase 50 ectos via buy order, I'm going to salvage them with the Silver-Fed Salvage-o-Matic, my starting magic find is 10 and my starting luck is 150.
+
+![image](https://github.com/user-attachments/assets/abc1cf1a-2f55-4936-bdab-ad3fea737047)
+
+
