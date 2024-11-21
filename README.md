@@ -54,6 +54,9 @@ Net Profit (Green Arrow) Icon: https://wiki.guildwars2.com/wiki/Category:Guild_u
 
 Placeholder Icon: https://wiki.guildwars2.com/wiki/Category:ArenaNet_logos#/media/File:User_Fey_Zeal_Gw2wlogo.png
 
+# GitHub Page of the PyQt5 LED I used in this project
+https://github.com/nlamprian/pyqt5-led-indicator-widget
+
 # Why does this exist?
 My attempts to rapidly level my magic find stat taught me that the net cost of said process can vary wildly (up to 30 gold of difference in my experience) depending on contemporaneous market conditions and the tools used. My initial solution to estimate net cost was a hard-coded python script, but once I maxed out my base magic find stat I thought there's a chance someone else might find this code useful. The result is a GUI that is (hopefully) intuitive and helpful for others who find themselves in the same situation I did.
 
