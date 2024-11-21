@@ -31,14 +31,23 @@ https://wiki.guildwars2.com/wiki/Salvage_kit
 **Art Assets taken from the Wiki**
 
 Glob of Ectoplasm Icon: https://wiki.guildwars2.com/wiki/Glob_of_Ectoplasm#/media/File:Glob_of_Ectoplasm.png
+
 Pile of Crystalline Dust Icon: https://wiki.guildwars2.com/wiki/Pile_of_Crystalline_Dust#/media/File:Pile_of_Crystalline_Dust.png
+
 Gold Coin Icon: https://wiki.guildwars2.com/wiki/Coin#/media/File:Gold_coin_(highres).png
+
 Silver Coin Icon: https://wiki.guildwars2.com/wiki/Coin#/media/File:Silver_coin_(highres).png
+
 Copper Coin Icon: https://wiki.guildwars2.com/wiki/Coin#/media/File:Copper_coin_(highres).png
+
 Essence of Luck (fine) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(fine)#/media/File:Essence_of_Luck_(fine).png
+
 Essence of Luck (masterwork) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(masterwork)#/media/File:Essence_of_Luck_(masterwork).png
+
 Essence of Luck (rare) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(rare)#/media/File:Essence_of_Luck_(rare).png
+
 Essence of Luck (exotic) Icon: https://wiki.guildwars2.com/wiki/Essence_of_Luck_(exotic)#/media/File:Essence_of_Luck_(exotic).png
+
 
 
 # Why does this exist?
