@@ -180,3 +180,9 @@ This is where the GUI tells me what my magic find and luck progress will be afte
 Finally, this is where the GUI tells me what I can expect the net profit of this whole endeavor to be:
 
 ![image](https://github.com/user-attachments/assets/85b7b625-9c09-4b78-ad55-616c656d42a6)
+
+You might notice that downwards-facing red arrow next to the numerical profit. That is a visual indicator I provided, in addition to the minus sign in the numeric gold field, to indicate that the net result will be a loss compared to your starting amount of gold. There is technically a green arrow as well that appears if the GUI thinks you will actually profit from one of these transactions:
+
+![image](https://github.com/user-attachments/assets/ccb5d767-4ed8-4342-88ff-a502b2930158)
+
+but please DO NOT expect to ever actually make gold while doing this. I can only ever get that green arrow to appear if I specify using a Black Lion Salvage Kit, which is dubious given my earlier statements about how I deliberately neglected the kit's cost per use. You MIGHT occasionally get lucky and actually turn a profit while doing this, but that never once happened to me.
