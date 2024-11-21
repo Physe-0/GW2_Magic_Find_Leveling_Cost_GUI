@@ -150,3 +150,8 @@ This section is where you select which salvage kit or salvage tool you plan on u
 This is just where you tell the GUI how many ectos you plan on purchasing. It is up to you to use the Trading Post to find out how many you can afford, the GUI will not do that for you:
 
 ![image](https://github.com/user-attachments/assets/38dc4cd1-df18-42a1-8ee8-e76f89a193bc)
+
+If you want a prediction of what your magic find stat and luck will be at the end of the transaction, use these fields; if you don't care, you can leave them as-is. The first is capped at 300, which is the highest you can raise your magic find stat solely through consuming luck. The second is capped at 472,510 which is as high at it goes. Keep in mind that you can absolutely enter combinations of magic find and luck that are not possible in-game, so it is on you to enter the values correctly:
+
+![image](https://github.com/user-attachments/assets/6a1999fa-00f0-4d80-a6fc-aa95100eecbb)
+
