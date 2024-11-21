@@ -165,8 +165,10 @@ And this is where you tell the GUI how you will sell your resultant Piles of Cry
 
 **Outputs**
 
-Here, I have run an example scenario to illustrate how the outputs work. Let's say I want to purchase 50 ectos via buy order, I'm going to salvage them with the Silver-Fed Salvage-o-Matic, my starting magic find is 10 and my starting luck is 150.
+Here, I have run an example scenario to illustrate how the outputs work. Let's say I want to purchase 50 ectos via buy order, I'm going to salvage them with the Silver-Fed Salvage-o-Matic, my starting magic find is 10 and my starting luck is 150:
 
 ![image](https://github.com/user-attachments/assets/abc1cf1a-2f55-4936-bdab-ad3fea737047)
 
+This is where the GUI tells me how many of each Essence of Luck rarity and dusts I can reasonably expect from this process:
 
+![image](https://github.com/user-attachments/assets/3ffe9bd0-c1b8-40bc-8b9e-724d7fb4dc76)
