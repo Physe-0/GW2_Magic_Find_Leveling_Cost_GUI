@@ -155,6 +155,8 @@ If you want a prediction of what your magic find stat and luck will be at the en
 
 ![image](https://github.com/user-attachments/assets/6a1999fa-00f0-4d80-a6fc-aa95100eecbb)
 
-This is where you tell the GUI whether you want to purchase ectos through buy orders or instant buying. The price you see updates automatically, just check the box to the left of the option you're going to use:
+This is where you tell the GUI whether you want to purchase ectos through buy orders or instant-buying. The rice you see updates automatically because the GUI fetches it from the GW2 API when you check or un-check a box, so just check the box to the left of the option you're going to use:
 
 ![image](https://github.com/user-attachments/assets/daef43a5-4fee-4aba-9d14-5e1dd11c3e04)
+
+And this is where you tell the GUI how you will sell your resultant Piles of Crystalline Dust back to the Trading Post, either through listing them or instant-selling. Again, the price you see updates automatically because the GUI fetches it from the GW2 API when you check or un-check a box, so just check the box to the left of your chosen option.
