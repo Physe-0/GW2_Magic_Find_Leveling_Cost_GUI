@@ -162,7 +162,7 @@ And here are the outputs, a.k.a. the results of your inputs and the resultant in
 
 ![image](https://github.com/user-attachments/assets/126e9973-8b18-41e0-bdf8-4ebfbcc6cac8)
 
-This is just a Green/Red LED that will let you know (along with a pop-up when the GUI launches) whether or not the GW2 API is down [GREEN means it's up, RED means it's down]. If the API is down, THE ENITRE GUI WILL NOT WORK:
+This is just a Green/Red LED that will let you know (along with a pop-up when the GUI launches) whether or not the GW2 API is down [GREEN means it's up, RED means it's down]. If the API is down, THE ENTIRE GUI WILL NOT WORK:
 
 ![image](https://github.com/user-attachments/assets/40537633-5ff4-44c9-9862-ec9b8b8ed710)
 
