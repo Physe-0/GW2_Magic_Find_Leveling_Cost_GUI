@@ -147,7 +147,7 @@ This section is where you select which salvage kit or salvage tool you plan on u
 
 ![image](https://github.com/user-attachments/assets/3f0c8a65-22ee-4f6e-a990-2cbe87c38a9a)
 
-This is just where you tell the GUI how many ectos you plan on purchasing, capped at 250 because that is the maost the game will let you purchase from the Trading Post at once. It is up to you to use the Trading Post to find out how many you can afford, the GUI will not do that for you:
+This is just where you tell the GUI how many ectos you plan on purchasing, capped at 250 because that is the most the game will let you purchase from the Trading Post at once. It is up to you to use the Trading Post to find out how many you can afford, the GUI will not do that for you:
 
 ![image](https://github.com/user-attachments/assets/38dc4cd1-df18-42a1-8ee8-e76f89a193bc)
 
@@ -155,3 +155,6 @@ If you want a prediction of what your magic find stat and luck will be at the en
 
 ![image](https://github.com/user-attachments/assets/6a1999fa-00f0-4d80-a6fc-aa95100eecbb)
 
+This is where you tell the GUI whether you want to purchase ectos through buy orders or instant buying. The price you see updates automatically, just check the box to the left of the option you're going to use:
+
+![image](https://github.com/user-attachments/assets/daef43a5-4fee-4aba-9d14-5e1dd11c3e04)
