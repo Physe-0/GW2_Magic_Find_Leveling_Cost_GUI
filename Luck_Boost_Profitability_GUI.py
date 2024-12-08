@@ -66,7 +66,7 @@ class GUI(QWidget):
         # Box to specify number of Ectos to Buy
         self.Number_of_Ectos_to_Buy = QSpinBox()
         self.Number_of_Ectos_to_Buy.setMinimum(1)
-        self.Number_of_Ectos_to_Buy.setMaximum(250)
+        self.Number_of_Ectos_to_Buy.setMaximum(300_000)
         self.Number_of_Ectos_to_Buy.setValue(1)
         self.Number_of_Ectos_to_Buy.setAlignment(Qt.AlignCenter)
         
