@@ -60,6 +60,34 @@ https://github.com/nlamprian/pyqt5-led-indicator-widget
 # Why does this exist?
 My attempts to rapidly level my magic find stat taught me that the net cost of said process can vary wildly (up to 30 gold of difference in my experience) depending on contemporaneous market conditions and the tools used. My initial solution to estimate net cost was a hard-coded python script, but once I maxed out my base magic find stat I thought there's a chance someone else might find this code useful. The result is a GUI that is (hopefully) intuitive and helpful for others who find themselves in the same situation I did.
 
+# Installation Instructions (Method 2: .exe File made using PyInstaller)
+
+"Are you joking? I'm not doing all that! Just give me the file already!"
+
+Ok, first click on this section:
+
+![image](https://github.com/user-attachments/assets/1a177672-37cf-40fb-a847-3affdf20d3ad)
+
+Then click on this link, which should download a zip file:
+
+![image](https://github.com/user-attachments/assets/5dae2f8d-43ee-4260-9b27-b7710468102b)
+
+You should now see the file in your downloads folder:
+
+![image](https://github.com/user-attachments/assets/c135b4d3-9731-43d4-8e62-9ea361eae6c8)
+
+Next, you can just follow the same instructions in "Step 3: Extract Files".
+
+Once the files are in the folder where you want them and have been extracted, you should see this:
+
+![image](https://github.com/user-attachments/assets/a8975a1b-5835-4e08-b8cc-44a792616423)
+
+Now just run (double-click) the file "Luck_Boost_Profitability_GUI.exe"!
+
+You will get a Windows pop-up like those discussed earlier, just follow the same steps I layed out for dealing with those.
+
+At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
+
 # Installation Instructions (Method 1: Pure python, non-exe)
 For those skeptical of running a random .exe from the internet, GOOD! You should always be skeptical of such a thing. For you, here is the first method. The .exe is still available for those who prefer the faster and easier method to get the GUI running and don't mind the theoretical risk, and I will explain how to access it later.
 
@@ -123,34 +151,6 @@ At some point in the process you might get a Windows pop-up telling you that pyt
   Now we can actually launch the GUI! All you have to do is run "Launch_GUI.bat" and after a few seconds the GUI should appear!
 
   You might get another pop-up from Windows warning you it doesn't recognize the file; same advice goes this time as last time.
-
-# Installation Instructions (Method 2: .exe File made using PyInstaller)
-
-"Are you joking? I'm not doing all that! Just give me the file already!"
-
-Ok, first click on this section:
-
-![image](https://github.com/user-attachments/assets/1a177672-37cf-40fb-a847-3affdf20d3ad)
-
-Then click on this link, which should download a zip file:
-
-![image](https://github.com/user-attachments/assets/5dae2f8d-43ee-4260-9b27-b7710468102b)
-
-You should now see the file in your downloads folder:
-
-![image](https://github.com/user-attachments/assets/c135b4d3-9731-43d4-8e62-9ea361eae6c8)
-
-Next, you can just follow the same instructions in "Step 3: Extract Files".
-
-Once the files are in the folder where you want them and have been extracted, you should see this:
-
-![image](https://github.com/user-attachments/assets/a8975a1b-5835-4e08-b8cc-44a792616423)
-
-Now just run (double-click) the file "Luck_Boost_Profitability_GUI.exe"!
-
-You will get a Windows pop-up like those discussed earlier, just follow the same steps I layed out for dealing with those.
-
-At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
 
 # How to Use the GUI
 
