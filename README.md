@@ -60,11 +60,14 @@ https://github.com/nlamprian/pyqt5-led-indicator-widget
 # Why does this exist?
 My attempts to rapidly level my magic find stat taught me that the net cost of said process can vary wildly (up to 30 gold of difference in my experience) depending on contemporaneous market conditions and the tools used. My initial solution to estimate net cost was a hard-coded python script, but once I maxed out my base magic find stat I thought there's a chance someone else might find this code useful. The result is a GUI that is (hopefully) intuitive and helpful for others who find themselves in the same situation I did.
 
-# Installation Instructions (Method 2: .exe File made using PyInstaller)
+# Installation Instructions (Method 1: .exe File made using PyInstaller)
 
-"Are you joking? I'm not doing all that! Just give me the file already!"
+"Hey slow down there, I'm downloading and running some random exe!"
+That's fair! If you skip to Method 2, I detailed how you get the GUI up and running purely using Python and my code, which you can read before running. For everyone else who just wants the GUI ASAP, continue reading.
 
-Ok, first click on this section:
+At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
+
+First click on this section:
 
 ![image](https://github.com/user-attachments/assets/1a177672-37cf-40fb-a847-3affdf20d3ad)
 
@@ -84,14 +87,18 @@ Once the files are in the folder where you want them and have been extracted, yo
 
 Now just run (double-click) the file "Luck_Boost_Profitability_GUI.exe"!
 
-You will get a Windows pop-up like those discussed earlier, just follow the same steps I layed out for dealing with those.
+Once you run it, you will most likely see this pop-up or something like it appear:
+
+  ![image](https://github.com/user-attachments/assets/c704437f-c20d-41a3-8217-c2994524387b)
+
+  This is just Windows saying it doesn't recognize the file and it thinks it might be malware or a virus or something. You can just click "More Info" and then "Run Anyway":
+
+  ![image](https://github.com/user-attachments/assets/d278e24d-735d-4148-8a74-3085a4c7fcb4)
 
 At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
 
 # Installation Instructions (Method 1: Pure python, non-exe)
 For those skeptical of running a random .exe from the internet, GOOD! You should always be skeptical of such a thing. For you, here is the first method. The .exe is still available for those who prefer the faster and easier method to get the GUI running and don't mind the theoretical risk, and I will explain how to access it later.
-
-At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
 
 **Step 1: Download Python**
 
@@ -141,6 +148,8 @@ At some point in the process you might get a Windows pop-up telling you that pyt
   Once you do, you'll see a command prompt window appear which will give you information about the library installation process, which will look something like this:
 
   ![image](https://github.com/user-attachments/assets/be678844-6c83-4325-b5ba-a4a71d857628)
+
+  You will get a Windows pop-up like those discussed earlier, just follow the same steps I layed out for dealing with those.
 
   You'll know it's done because a line will appear saying "Press any key to continue . . ."
 
