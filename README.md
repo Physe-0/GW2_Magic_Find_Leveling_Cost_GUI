@@ -79,7 +79,11 @@ You should now see the file in your downloads folder:
 
 ![image](https://github.com/user-attachments/assets/c135b4d3-9731-43d4-8e62-9ea361eae6c8)
 
-Next, you can just follow the same instructions in "Step 3: Extract Files".
+**Step 3: Extract Files**
+
+  Move that zip folder into whatever folder you wish on your computer, though I recommend creating one that is easy to access (e.g. "Documents\GW2_GUI").
+
+  Once you have done that, right-click the file and select "Extract All". A pop-up will appear letting you know where the files will be extracted to, so just ensure they're going where you expect.
 
 Once the files are in the folder where you want them and have been extracted, you should see this:
 
