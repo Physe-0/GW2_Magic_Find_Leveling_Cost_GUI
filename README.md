@@ -95,10 +95,10 @@ Once you run it, you will most likely see this pop-up or something like it appea
 
   ![image](https://github.com/user-attachments/assets/d278e24d-735d-4148-8a74-3085a4c7fcb4)
 
-At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
-
-# Installation Instructions (Method 1: Pure python, non-exe)
+# Installation Instructions (Method 2: Pure python, non-exe)
 For those skeptical of running a random .exe from the internet, GOOD! You should always be skeptical of such a thing. For you, here is the first method. The .exe is still available for those who prefer the faster and easier method to get the GUI running and don't mind the theoretical risk, and I will explain how to access it later.
+
+At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
 
 **Step 1: Download Python**
 
