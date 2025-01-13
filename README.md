@@ -62,7 +62,7 @@ My attempts to rapidly level my magic find stat taught me that the net cost of s
 
 # Installation Instructions (Method 1: .exe File made using PyInstaller)
 
-"Hey slow down there, I'm downloading and running some random exe!"
+"Hey slow down there, I'm not downloading and running some random exe!"
 That's fair! If you skip to Method 2, I detailed how you get the GUI up and running purely using Python and my code, which you can read before running. For everyone else who just wants the GUI ASAP, continue in this section.
 
 At some point in the process you might get a Windows pop-up telling you that python is trying to access the internet, and asking you to determine its network permissions (e.g. Home, Public, Workplace). Select whatever you're most comfortable with, though in general I wouldn't recommend "Public" or "Workplace".
